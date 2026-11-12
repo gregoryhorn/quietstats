@@ -1,0 +1,15 @@
+{
+  "name": "otpauth",
+  "version": "9.4.1",
+  "main": "otpauth.cjs",
+  "license": "MIT",
+  "description": "Unmodified upstream OTPAuth Node CJS and ESM distributions, vendored for offline installation",
+  "type": "module",
+  "module": "otpauth.node.mjs",
+  "exports": {
+    ".": {
+      "import": "./otpauth.node.mjs",
+      "require": "./otpauth.cjs"
+    }
+  }
+}

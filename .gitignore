@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.local/
+.test-state/
+*.tgz
+evidence/
+BUILD-*.md
+build-agent*.log
+graft/
+.npm-cache/

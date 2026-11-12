@@ -1,0 +1,21 @@
+{
+  "name": "quietstats-runtime",
+  "main": "adapters/cloudflare/worker.mjs",
+  "compatibility_date": "2026-07-30",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "none",
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "AUTHORITY", "class_name": "QuietStatsAuthority" }],
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["QuietStatsAuthority"] },
+  ],
+  "vars": { "RUNTIME_MODE": "production", "PRODUCTION_QUALIFIED": "false" },
+}
